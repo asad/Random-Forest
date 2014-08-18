@@ -7,8 +7,8 @@ public class MainRun {
     @SuppressWarnings("static-access")
     public static void main(String args[]) {
 
-        String traindata = "/home/mohammad/Desktop/Material/Data.txt";
-        String testdata = "/home/mohammad/Desktop/Material/Test.txt";
+        String traindata = "Data.txt";
+        String testdata = "Test.txt";
         int numTrees = 100;
 
         DescribeTrees DT = new DescribeTrees(traindata);
@@ -18,11 +18,10 @@ public class MainRun {
         DescribeTrees DTT = new DescribeTrees(traindata);
         ArrayList<int[]> Test = DTT.CreateInput(testdata);
 
-        for (int k = 0; k < Input.size(); k++) {
-            if (Input.get(k)[Input.get(k).length - 1] < categ) {
-                continue;
+        for (int[] Input1 : Input) {
+            if (Input1[Input1.length - 1] < categ) {
             } else {
-                categ = Input.get(k)[Input.get(k).length - 1];
+                categ = Input1[Input1.length - 1];
             }
         }
 

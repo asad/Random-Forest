@@ -11,7 +11,7 @@ public class MainRunCateg {
         /*
          * data has to be separated by either ',' or ' ' only...
          */
-        int categ = 1;
+        int categ = -1;
         String traindata, testdata;
         if (categ > 0) {
             traindata = "KDDTrainSmall.txt";
@@ -41,7 +41,7 @@ public class MainRunCateg {
         }
 
         //int numTrees = 10;
-        for (int i = 5; i < 100; i += 5) {
+        for (int i = 10; i < 50; i += 10) {
             int numTrees = i;
             System.out.println("\nnumTrees " + numTrees);
             int M = Train.get(0).size() - 1;
